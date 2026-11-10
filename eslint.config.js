@@ -2,6 +2,7 @@ import js from "@eslint/js";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 import { defineConfig } from "eslint/config";
+ 
 
 export default defineConfig([
   {
@@ -21,6 +22,7 @@ export default defineConfig([
         { max: 50, skipBlankLines: true, skipComments: true },
       ],
       "max-params": ["error", 3],
+      "id-length": ["warn", {min: 3}], 
 
       // Code good practice
       "prefer-const": "error",
@@ -33,6 +35,9 @@ export default defineConfig([
       "no-param-reassign": "error",
       "no-shadow": "error",
       "prefer-template": "error",
+      "no-template-curly-in-string": "warn",
+      "no-useless-assignment": "warn",
+      "no-magic-numbers": ["warn",{"ignore":[0,1]}],
 
       // User interface
       "no-alert": "error",
